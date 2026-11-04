@@ -1,0 +1,28 @@
+name = "tally-whatsapp-api"
+main = "src/index.ts"
+compatibility_date = "2024-09-23"
+
+[vars]
+# Seller details printed on every document
+BUSINESS_NAME = "Your Business Name"
+BUSINESS_ADDRESS = "Street, City, State, PIN"
+BUSINESS_GSTIN = "09AAAAA0000A1Z5"
+# First two digits of the business GSTIN (state code) decide CGST+SGST vs IGST
+BUSINESS_STATE_CODE = "09"
+# Appended to the footer of every document
+PAYMENT_TERMS = "Payment due within 15 days of invoice date."
+BANK_DETAILS = "Bank: XXXX | A/C: 0000000000 | IFSC: XXXX0000000"
+# WhatsApp
+GRAPH_API_VERSION = "v19.0"
+WHATSAPP_TEMPLATE_NAME = "document_delivery"
+WHATSAPP_TEMPLATE_LANG = "en"
+DEFAULT_COUNTRY_CODE = "91"
+# Optional: comma-separated emails allowed to use the API (empty = any signed-in user)
+ALLOWED_EMAILS = ""
+# Web app origin for CORS
+ALLOWED_ORIGIN = "http://localhost:5173"
+
+# Secrets (set with `wrangler secret put NAME`):
+#   SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY,
+#   WHATSAPP_TOKEN (permanent System User token), WHATSAPP_PHONE_NUMBER_ID,
+#   WEBHOOK_VERIFY_TOKEN, META_APP_SECRET (optional, enables signature check)

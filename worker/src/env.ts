@@ -1,0 +1,23 @@
+export interface Env {
+  SUPABASE_URL: string;
+  SUPABASE_SERVICE_ROLE_KEY: string;
+
+  BUSINESS_NAME: string;
+  BUSINESS_ADDRESS: string;
+  BUSINESS_GSTIN: string;
+  BUSINESS_STATE_CODE: string;
+  PAYMENT_TERMS: string;
+  BANK_DETAILS: string;
+
+  WHATSAPP_TOKEN: string;
+  WHATSAPP_PHONE_NUMBER_ID: string;
+  WEBHOOK_VERIFY_TOKEN: string;
+  META_APP_SECRET?: string;
+  GRAPH_API_VERSION: string;
+  WHATSAPP_TEMPLATE_NAME: string;
+  WHATSAPP_TEMPLATE_LANG: string;
+  DEFAULT_COUNTRY_CODE: string;
+
+  ALLOWED_EMAILS: string;
+  ALLOWED_ORIGIN: string;
+}
